@@ -1082,3 +1082,43 @@ footer {
     order: 3;
   }
 }
+
+.menu-btn {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+
+  .navigation.active {
+    right: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .nav-items a {
+    margin: 15px 0;
+    color: white;
+  }
+}

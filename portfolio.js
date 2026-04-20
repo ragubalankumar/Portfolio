@@ -7,6 +7,19 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+  navigation.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (!navigation.contains(e.target) && !menuBtn.contains(e.target)) {
+    navigation.classList.remove("active");
+  }
+});
+
 const serviceModals = document.querySelectorAll(".service-modal");
 const learnmoreBtns = document.querySelectorAll(".learn-more-btn");
 const modalcloseBtns = document.querySelectorAll(".modal-close-btn");
