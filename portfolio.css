@@ -175,8 +175,8 @@ header.sticky.nav-bar {
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
-  gap: 20px;
-  width:fit-content;
+  gap: 60px;
+  width:100vw;
   margin-top: 10px;
 }
 
@@ -320,7 +320,7 @@ header.sticky.nav-bar {
 }
 
 .container {
-  width: 1200px;
+  width: 1000px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -1203,10 +1203,11 @@ footer {
   }
 
   .about-info .description p {
-    margin-left: 0 !important;
+    margin-left: 350px !important;
     text-align: center !important;
     font-size: 0.875rem !important;
     line-height: 1.7 !important;
+    width: 400px;
   }
 
   .profesional-list {
