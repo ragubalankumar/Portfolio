@@ -37,6 +37,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -157,7 +162,7 @@ header.sticky.nav-bar {
 .home {
   position: relative;
   max-width: 1250px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-left: auto;
   margin-right: auto;
   padding: 4rem 2rem;
@@ -166,9 +171,10 @@ header.sticky.nav-bar {
 
 .home .home-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content:space-between;
   align-items: center;
-  gap: 90px;
+  gap: 60px;
   width: 100%;
 }
 
@@ -192,6 +198,7 @@ header.sticky.nav-bar {
 }
 
 .home-container .info h2 {
+  margin-top: 70px;
   font-size: 4rem;
   font-weight: 600;
   line-height: 50px;
@@ -235,7 +242,7 @@ header.sticky.nav-bar {
 .home-container .home-img {
   display: flex;
   justify-content: center;
-  width: 100px;
+  width: 700px;
 }
 
 .home-container .home-img img {
@@ -317,9 +324,9 @@ header.sticky.nav-bar {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 🔥 center horizontally */
+  align-items: center;
   justify-content: center;
-  text-align: center; /* 🔥 center text */
+  text-align: center;
 }
 /*=======About section=======*/
 .about .container .content {
@@ -508,14 +515,6 @@ header.sticky.nav-bar {
   width: 75%;
 }
 
-/*.experience-card{
-  background: var(--card-bg-color);
-  border-radius: 3px solid var(--second-color);
-  padding: 35px;
-  border-radius: 6px;
-  box-shadow: var(--box-shadow);
-  transition: .3s ease;
-}
 /*=======Services section=======*/
 .services.skills.container.content {
   width: 100%;
@@ -589,17 +588,15 @@ header.sticky.nav-bar {
 .service-modal-body {
   position: relative;
   background: var(--model-bg-color);
-  max-width: 100%;
-  margin: 200px;
-  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
-  transform: translateY(-50px);
-  transition: 0.5s ease;
 
   max-height: 90vh;
   overflow-y: auto;
-  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -686,30 +683,13 @@ header.sticky.nav-bar {
 .portfolio-list .img-card .info span {
   font-size: 1.2rem;
 }
-/*=======Get-in-touct=======*/
-
-/*=======Our Clients=======*/
 
 /*=======Contact section=======*/
-/* .contact-section .content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .contact-section .content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-} */
-
 @media (max-width: 768px) {
   .contact-section .content {
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* ✅ FIX */
+    align-items: center;
     text-align: center;
     gap: 30px;
   }
@@ -914,7 +894,7 @@ footer {
 @media (max-width: 1024px) {
   .home-container {
     flex-direction: column;
-    align-items: center; /* 🔥 center everything */
+    align-items: center;
     justify-content: center;
     text-align: center;
   }
@@ -927,7 +907,7 @@ footer {
 
   .home-container .info p {
     max-width: 100%;
-    margin: 0 auto; /* 🔥 center paragraph */
+    margin: 0 auto;
   }
 
   .home-container .home-img {
@@ -936,12 +916,13 @@ footer {
   }
 
   .home-container .home-img img {
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    max-width: 300px;
   }
 
   .home-container .media-icons {
-    flex-direction: row; /* 🔥 move icons horizontally */
+    flex-direction: row;
     justify-content: center;
     margin: 20px 0;
   }
@@ -970,7 +951,7 @@ footer {
     margin-bottom: 10px;
     text-align: center;
     margin-left: 180px;
-  }  
+  }
 
   .about-info .description h4 span {
     color: var(--second-color);
@@ -978,15 +959,15 @@ footer {
   }
 
   .about-info .description p {
-    text-align:left;
+    text-align: left;
     margin-left: 210px;
   }
 
-  .profesional-list{
+  .profesional-list {
     margin-left: 330px;
   }
 
-  .btn{
+  .btn {
     margin-right: 40px;
   }
 }
@@ -1020,7 +1001,7 @@ footer {
   }
 
   .nav-items {
-    display: none; /* later you can add hamburger */
+    display: none;
   }
 
   .home {
@@ -1073,34 +1054,42 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .home-container .info h2 {
-    font-size: 1.5rem;
+  .service-modal {
+    padding: 10px;
   }
 
-  .btn {
-    padding: 10px 20px;
+  .service-modal-body {
+    width: 95%;
+    padding: 15px;
   }
 
-  .contact-right p {
-    font-size: 1.2rem;
+  .service-modal-body h3 {
+    font-size: 18px;
   }
 
-  @media (max-width: 768px) {
-    .footer-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-      justify-items: center; /* ✅ grid center fix */
-    }
+  .service-modal-body h4 {
+    font-size: 14px;
   }
 
-  .footer-container .info ul {
-    flex-direction: column;
+  .service-modal-body p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .service-modal-body ul li {
+    font-size: 13px;
+  }
+
+  .modal-close-btn {
+    font-size: 18px;
+    top: 10px;
+    right: 10px;
   }
 }
 
 @media (max-width: 1024px) {
   .home-container .media-icons {
-    flex-direction: row; /* 🔥 horizontal */
+    flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
   }
@@ -1108,13 +1097,13 @@ footer {
 
 @media (max-width: 1024px) {
   .home-container .info {
-    align-items: center; /* 🔥 center everything */
+    align-items: center;
     text-align: center;
     margin-bottom: 10px;
   }
 
   .home-container .info .btn {
-    align-self: center; /* 🔥 center button */
+    align-self: center;
     margin-bottom: 10px;
   }
 }
@@ -1178,38 +1167,500 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+/* ============================================================
+/* ============================================================
+   MOBILE RESPONSIVE: max-width 425px (covers 320px – 425px)
+   Uses !important to override all broken tablet cascade values.
+   ============================================================ */
+@media (max-width: 425px) {
+
+  /* ── Global ── */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* ── Kill all broken cascade margins from 1024px block ── */
+  .about-info .description h3 {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    font-size: clamp(1.3rem, 6vw, 1.6rem) !important;
+    text-align: center !important;
+  }
+
+  .about-info .description h4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(0.95rem, 4.5vw, 1.1rem) !important;
+    text-align: center !important;
+  }
+
+  .about-info .description p {
+    margin-left: 0 !important;
+    text-align: center !important;
+    font-size: 0.875rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .profesional-list {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  .btn {
+    margin-right: 0 !important;
+    padding: 12px 20px !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* ── Navbar ── */
+  .nav-bar {
+    padding: 0 16px;
+    height: 60px;
+  }
+
+  .nav-bar .logo {
+    font-size: 1.1rem;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 22px;
+  }
+
+  /* ── Home Section ── */
+  .home {
+    padding: 80px 16px 40px;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .home .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0;
+    text-align: center;
+  }
+
+  .home-container .media-icons {
+    order: 1;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 !important;
+    row-gap: 0;
+  }
+
+  .home-container .media-icons a {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .home-container .info {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-container .info h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .home-container .info h3 {
+    font-size: clamp(0.85rem, 4vw, 1rem);
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+  }
+
+  .home-container .info p {
+    font-size: 0.875rem;
+    max-width: 100%;
+    line-height: 1.6;
+    text-align: center;
+    margin: 8px 0 0;
+  }
+
+  .home-container .info .btn {
+    align-self: center !important;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .home-container .home-img {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-container .home-img img {
+    width: clamp(200px, 70vw, 280px);
+    height: clamp(200px, 70vw, 280px);
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .home .scroll-down {
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.85rem;
+  }
+
+  /* ── Section Titles ── */
+  .section-title-01 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .section-title-02 {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    transform: translateY(-55px);
+  }
+
+  /* ── About Section ── */
+  .about.section {
+    padding: 3rem 16px;
+  }
+
+  .flle {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .about-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-img img {
+    width: clamp(180px, 65vw, 260px);
+    height: clamp(180px, 65vw, 260px);
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-info .description {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-item h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--second-color);
+  }
+
+  .list-item span {
+    font-size: 0.75rem;
+    color: var(--third-color);
+    text-align: center;
+  }
+
+  .about-info .btn {
+    margin: 16px auto 0 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* ── Skills Section ── */
+  .skills.section {
+    padding: 3rem 16px;
+  }
+
+  .Skills-description,
+  .skills-description {
+    width: 100%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .Skills-description h3,
+  .skills-description h3 {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+  }
+
+  .Skills-description p,
+  .skills-description p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .skills-info {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .education {
+    width: 100%;
+  }
+
+  .edu-list .item {
+    padding: 14px;
+    text-align: left;
+  }
+
+  .edu-list .item .year {
+    font-size: 0.75rem;
+  }
+
+  .edu-list .item p {
+    font-size: 0.8rem;
+  }
+
+  .bar {
+    padding: 14px;
+  }
+
+  .bar .info span {
+    font-size: 0.8rem;
+  }
+
+  .education-all {
+    margin-bottom: 40px;
+  }
+
+  /* ── Projects Section ── */
+  .service.section {
+    padding: 3rem 16px;
+  }
+
+  .services-description h3 {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+    margin-bottom: 24px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .service-card {
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .service-card > i {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
   .service-modal {
-    padding: 10px; /* prevents touching screen edges */
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .service-modal-body {
     width: 100%;
     max-width: 100%;
-    padding: 130px;
+    padding: 16px;
     border-radius: 8px;
+    max-height: 85vh;
   }
 
   .service-modal-body h3 {
-    font-size: 18px;
+    font-size: 1.1rem;
+    padding-right: 28px;
   }
 
   .service-modal-body h4 {
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 
   .service-modal-body p {
-    font-size: 13px;
-    line-height: 20px;
+    font-size: 0.82rem;
+    line-height: 1.6;
   }
 
   .service-modal-body ul li {
-    font-size: 13px;
+    font-size: 0.82rem;
+    margin-top: 10px;
   }
 
   .modal-close-btn {
-    font-size: 18px;
-    top: 10px;
+    font-size: 16px;
+    top: 12px;
+    right: 12px;
+  }
+
+  /* ── Portfolio Section ── */
+  .portfolio {
+    padding: 3rem 16px;
+  }
+
+  .Portfolio-list,
+  .img-card-container {
+    width: 100%;
+  }
+
+  .portfolio-list,
+  .Portfolio-list {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .portfolio-list .img-card {
+    height: 220px;
+    width: 100%;
+  }
+
+  /* ── Contact Section ── */
+  .contact-section.section {
+    padding: 3rem 16px;
+  }
+
+  .contact-section .content {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .contact-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-left h2 {
+    font-size: clamp(1.2rem, 6vw, 1.6rem);
+    margin-bottom: 24px;
+  }
+
+  .contact-list li {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-list li h3 {
+    font-size: 1rem;
+  }
+
+  .contact-list li span,
+  .contact-list li a {
+    margin-left: 0 !important;
+    font-size: 0.875rem;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 40px 16px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    justify-items: center;
+  }
+
+  .footer-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-box h3 {
+    font-size: 1rem;
+  }
+
+  .footer-box p,
+  .footer-box ul li a {
+    font-size: 0.85rem;
+  }
+
+  .footer-box ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    margin-top: 24px;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  /* ── Scroll to top ── */
+  .scrollTotop-btn {
+    width: 38px;
+    height: 38px;
+    right: 10px;
+    bottom: 16px;
+  }
+
+  .scrollTotop-btn.active {
     right: 10px;
   }
 }
