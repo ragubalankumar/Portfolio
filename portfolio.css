@@ -596,7 +596,7 @@ header.sticky.nav-bar {
   box-shadow: var(--box-shadow);
   transform: translateY(-50px);
   transition: 0.5s ease;
- 
+
   max-height: 90vh;
   overflow-y: auto;
   box-sizing: border-box;
@@ -716,6 +716,15 @@ header.sticky.nav-bar {
 
   .contact-left {
     width: 100%;
+  }
+
+  .footer-container {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }
 
@@ -936,6 +945,50 @@ footer {
     justify-content: center;
     margin: 20px 0;
   }
+
+  .footer-container {
+    padding-right: 30px;
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .about-info.description {
+    text-align: center;
+  }
+
+  .about-info .description h3 {
+    margin-top: 40px;
+    margin-left: 250px;
+  }
+
+  .about-info .description h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 180px;
+  }  
+
+  .about-info .description h4 span {
+    color: var(--second-color);
+    text-align: center;
+  }
+
+  .about-info .description p {
+    text-align:left;
+    margin-left: 210px;
+  }
+
+  .profesional-list{
+    margin-left: 330px;
+  }
+
+  .btn{
+    margin-right: 40px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1126,10 +1179,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-
   .service-modal {
     padding: 10px; /* prevents touching screen edges */
-    
   }
 
   .service-modal-body {
@@ -1149,7 +1200,7 @@ footer {
 
   .service-modal-body p {
     font-size: 13px;
-    line-height: 20px
+    line-height: 20px;
   }
 
   .service-modal-body ul li {
@@ -1162,4 +1213,3 @@ footer {
     right: 10px;
   }
 }
-
