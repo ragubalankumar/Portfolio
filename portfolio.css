@@ -52,6 +52,7 @@ body {
   margin: 2rem 0 0 0;
   transition: 0.5s ease;
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -174,8 +175,9 @@ header.sticky.nav-bar {
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
-  gap: 60px;
-  width: 100%;
+  gap: 20px;
+  width:fit-content;
+  margin-top: 10px;
 }
 
 .home-container .media-icons {
@@ -286,7 +288,7 @@ header.sticky.nav-bar {
   margin-left: auto;
   margin-right: auto;
   max-width: 1150px;
-  width: 100%;
+  width: 1200px;
   padding: 4rem 1rem;
 }
 
@@ -318,7 +320,7 @@ header.sticky.nav-bar {
 }
 
 .container {
-  width: 100%;
+  width: 1200px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -942,7 +944,7 @@ footer {
 
   .about-info .description h3 {
     margin-top: 40px;
-    margin-left: 250px;
+    margin-left: 450px;
   }
 
   .about-info .description h4 {
@@ -950,7 +952,7 @@ footer {
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
-    margin-left: 180px;
+    margin-left: 340px;
   }
 
   .about-info .description h4 span {
@@ -960,7 +962,7 @@ footer {
 
   .about-info .description p {
     text-align: left;
-    margin-left: 210px;
+    margin-left: 320px;
   }
 
   .profesional-list {
@@ -968,7 +970,7 @@ footer {
   }
 
   .btn {
-    margin-right: 40px;
+    margin-right: 60px;
   }
 }
 
@@ -978,6 +980,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
   }
 
   .about-img {
