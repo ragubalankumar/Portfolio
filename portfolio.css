@@ -175,7 +175,7 @@ header.sticky.nav-bar {
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   width:fit-content;
   margin-top: 10px;
 }
