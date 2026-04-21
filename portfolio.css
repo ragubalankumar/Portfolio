@@ -173,10 +173,10 @@ header.sticky.nav-bar {
 .home .home-container {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   gap: 60px;
-  width:100vw;
+  width: 100vw;
   margin-top: 10px;
 }
 
@@ -287,9 +287,10 @@ header.sticky.nav-bar {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1150px;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   padding: 4rem 1rem;
+  margin: auto;
 }
 
 .section-title-01 {
@@ -320,15 +321,18 @@ header.sticky.nav-bar {
 }
 
 .container {
-  width: 1000px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: auto;
 }
 /*=======About section=======*/
 .about .container .content {
@@ -944,7 +948,7 @@ footer {
 
   .about-info .description h3 {
     margin-top: 40px;
-    margin-left: 450px;
+    
   }
 
   .about-info .description h4 {
@@ -952,7 +956,7 @@ footer {
     font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
-    margin-left: 340px;
+   
   }
 
   .about-info .description h4 span {
@@ -962,11 +966,7 @@ footer {
 
   .about-info .description p {
     text-align: left;
-    margin-left: 320px;
-  }
-
-  .profesional-list {
-    margin-left: 330px;
+    
   }
 
   .btn {
@@ -1011,9 +1011,17 @@ footer {
     padding: 2rem 1rem;
   }
 
-  .home-container .info h2 {
+  .home .home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .home-container .info h2{
     font-size: 2rem;
   }
+
 
   .home-container .info h3 {
     font-size: 1.2rem;
@@ -1116,6 +1124,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .media-icons {
@@ -1176,9 +1185,9 @@ footer {
    Uses !important to override all broken tablet cascade values.
    ============================================================ */
 @media (max-width: 425px) {
-
   /* ── Global ── */
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
     width: 100%;
   }
@@ -1203,11 +1212,12 @@ footer {
   }
 
   .about-info .description p {
-    margin-left: 350px !important;
-    text-align: center !important;
-    font-size: 0.875rem !important;
-    line-height: 1.7 !important;
-    width: 400px;
+    margin: 0 auto ;
+    width: 100% ;
+    max-width: 95%;
+    text-align: center;
+    font-size: 0.875rem ;
+    line-height: 1.7 ;
   }
 
   .profesional-list {
@@ -1668,3 +1678,4 @@ footer {
     right: 10px;
   }
 }
+
